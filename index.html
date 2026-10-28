@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeadlineAI - College Deadline Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+         
+        <header class="header">
+
+            <div>
+                <h1>DeadlineAI 🤖</h1>
+                <p>Never Miss an Important College Deadline Again!</p>
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <div>
+                    <p>Total Deadlines</p>
+                    <h2 id="totalCount">0</h2>
+                </div>
+            </div>
+
+
+            <div class="card urgent-card">
+                <div class="card-icon">🔴</div>
+                <div>
+                    <p>Urgent</p>
+                    <h2 id="urgentCount">0</h2>
+                </div>
+            </div>
+
+
+            <div class="card upcoming-card">
+                <div class="card-icon">🟡</div>
+                <div>
+                    <p>Upcoming</p>
+                    <h2 id="upcomingCount">0</h2>
+                </div>
+            </div>
+
+
+            <div class="card completed-card">
+                <div class="card-icon">✅</div>
+                <div>
+                    <p>Completed</p>
+                    <h2 id="completedCount">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Add Deadline Button -->
+        <div class="button-area">
+
+            <button id="addButton" class="add-button">
+                + Add Deadline
+            </button>
+
+        </div>
+
+
+        <!-- Add Deadline Form -->
+        <section id="deadlineForm" class="form-container">
+
+            <div class="form-header">
+                <h2>➕ Add New Deadline</h2>
+
+                <button id="closeForm" class="close-button">
+                    ✕
+                </button>
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="taskName">
+                    Task Name
+                </label>
+
+                <input
+                    type="text"
+                    id="taskName"
+                    placeholder="Example: Java Assignment"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="subject">
+                    Subject
+                </label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Example: Java Programming"
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="deadlineDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="deadlineDate"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="deadlineTime">
+                        Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="deadlineTime"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="priority">
+                    Priority
+                </label>
+
+                <select id="priority">
+
+                    <option value="High">
+                        🔴 High
+                    </option>
+
+                    <option value="Medium">
+                        🟡 Medium
+                    </option>
+
+                    <option value="Low">
+                        🟢 Low
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="saveDeadline" class="save-button">
+                Save Deadline
+            </button>
+
+        </section>
+
+
+        <!-- Upcoming Deadlines -->
+        <section class="deadlines-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>📅 Upcoming Deadlines</h2>
+                    <p>Keep track of your important college tasks.</p>
+                </div>
+
+            </div>
+
+
+            <div id="deadlineList" class="deadline-list">
+
+                <!-- JavaScript will add deadlines here -->
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        📭
+                    </div>
+
+                    <h3>No deadlines yet</h3>
+
+                    <p>
+                        Click "Add Deadline" to create your first deadline.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI Section -->
+        <section class="ai-section">
+
+            <div class="ai-icon">
+                🤖
+            </div>
+
+            <div class="ai-content">
+
+                <h2>AI Deadline Assistant</h2>
+
+                <p>
+                    In the future, AI can automatically understand
+                    college announcements and create deadlines for you.
+                </p>
+
+                <div class="ai-example">
+
+                    <strong>Example:</strong>
+
+                    <span>
+                        "Submit the Java project before September 10 at 5 PM."
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                © 2026 DeadlineAI | Smart Academic Deadline Management
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
